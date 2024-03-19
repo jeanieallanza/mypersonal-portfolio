@@ -304,10 +304,8 @@
     border-radius: inherit;
     z-index: -1;
   }
-  
-  
-  
-  
+
+
   
   /*-----------------------------------*\
     #MAIN
@@ -344,7 +342,7 @@
     gap: 15px;
   }
   
-  .avatar-box {
+  .avatar-box img{
     border-radius: 20px;
   }
   
@@ -498,6 +496,22 @@
   .navbar-link:focus { color: var(--light-gray-70); }
   
   .navbar-link.active { color: var(--orange-yellow-crayola); }
+
+  .navbar-item .discovery-btn {
+    color: hsl(0, 0%, 7%);
+    background:  hsl(45, 100%, 72%);
+    padding: 5px 10px;
+    width: auto;
+    border-radius: 10px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-item  .discovery-btn:hover {
+    background: orange;
+  }
   
   
   
@@ -517,7 +531,7 @@
   }
   
   .about-text p { margin-bottom: 15px; }
-  
+
   
   
   /**
@@ -742,13 +756,17 @@
   .select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
   
   .project-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    margin-bottom: 10px;
+    column-count: 3;
+    column-gap: 15px;
+    margin: 20px auto;
+    max-width: 1920px;
   }
   
-  .project-item { display: none; }
+  .project-item { 
+    display: none;
+    margin-bottom: 20px;
+    overflow: hidden;
+   }
   
   .project-item.active {
     display: block;
@@ -760,12 +778,15 @@
     100% { transform: scale(1); }
   }
   
-  .project-item > a { width: 100%; }
+  .project-item > a { 
+    width: 100%;
+    height: auto;
+  }
   
   .project-img {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: auto;
     border-radius: 16px;
     overflow: hidden;
     margin-bottom: 15px;
@@ -818,7 +839,7 @@
 
   .project-img video {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     transition: var(--transition-1);
   }
